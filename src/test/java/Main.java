@@ -1,3 +1,8 @@
+import java.io.IOException;
+
+import static Day1Test.TestDriver.chromeHealth;
+import static Day1Test.TestDriver.firefoxHealth;
+import static Day2Test.InputHandling.*;
 
 public class Main {
 
@@ -8,10 +13,19 @@ public class Main {
     //stack & heap
     //Data type
 
-    static String URL = "www.google.com";
+    public static void main(String[] args) throws IOException {
+//
+//      var result = chromeHealth();
+//      System.out.println(result);
+//
+//      var Fx = firefoxHealth();
+//      System.out.println(Fx);
 
-    public static void main(String[] args) {
-        System.out.println("Project setup done");
+        /* Open respective app and validate text box and fill the text box form and close the drive*/
+      var driver = InitWebdriver();
+      String Url = OpenWindow(driver);
+      DoTextBox(driver, Url);
+      CloseWindow(driver);
 
     }
 

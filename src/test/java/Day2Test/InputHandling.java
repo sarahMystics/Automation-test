@@ -33,6 +33,7 @@ public class InputHandling {
         driver.get(Url);
         String Tittle = driver.getTitle();
         System.out.println(Tittle);
+
         WebElement TxtBoxbtn = driver.findElement(By.xpath("//span[contains(text(),'Text Box')]"));
         TxtBoxbtn.click();
         WebElement element = driver.findElement(By.xpath("//h1[contains(text(),'Text Box')]"));
